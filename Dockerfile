@@ -20,7 +20,7 @@ RUN set -ex; \
 		opcache \
 		zip \
 	; \
-	pecl install imagick; \
+	pecl install imagick-3.4.4; \
 	docker-php-ext-enable imagick; \
 	\
 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
