@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM php:8-fpm
 
 # install the PHP extensions we need (https://make.wordpress.org/hosting/handbook/handbook/server-environment/#php-extensions)
 RUN set -ex; \
@@ -20,7 +20,7 @@ RUN set -ex; \
 		opcache \
 		zip \
 	; \
-	pecl install imagick-3.4.4; \
+	pecl install imagick-3.7.0; \
 	docker-php-ext-enable imagick; \
 	\
 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
